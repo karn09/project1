@@ -25,8 +25,14 @@ img {
 
 .row {
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
+
 }
 .pull-left {
 	text-align: left;
@@ -47,13 +53,21 @@ img {
 	width: 25%; 
 }
 .col-4 {
-	width: 33.33% 
+    width: 33.33%
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+
+
 }
 .col-5 {
 	width: 41.67%; 
 }
 .col-6 {
 	width: 50%; 
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
 }
 .col-7 {
 	width: 58.33%; 
@@ -72,21 +86,49 @@ img {
 }
 .col-12 {
 	width: 100%; 
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
 }
 
 
-@media all and (max-width: 300px) {
-	#main-content #app {
-		flex-wrap: wrap;
-		flex-direction: column;
-	}
+@media all and (max-width: 400px) {
+#header #about h1 {
+	font-size: 2em;
+	margin: 0;
+}
+#header #about h3 {
+    font-size: .7em;
+}
+#header h2 {
+	font-size: 1em;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
 }
 
-@media all and (max-width: 500px) {
-	#main-content #app {
-		flex-wrap: wrap;
-		flex-direction: column;
-	}
+@media all and (max-width: 750px) {
+.pull-left {
+	text-align: center;
+}
+.pull-right {
+	text-align: center;
+}
+.center {
+	text-align: center;
+}
+}
+
+@media all and (max-width: 1100px) {
+.pull-left {
+	text-align: center;
+}
+.pull-right {
+	text-align: center;
+}
+.center {
+	text-align: center;
+}
 }
 
 #header {
